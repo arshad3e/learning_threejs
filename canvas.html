@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars */
+        }
 
+        #toolbar {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #canvas {
+            border: 1px solid #000;
+            cursor: crosshair;
+            background-color: #fff; /* White canvas */
+        }
+
+        .tool-button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* Highlight the selected tool */
+        .tool-button.selected {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toolbar">
+        <button id="pen-button" class="tool-button" data-tool="pen">Pen</button>
+        <button id="pencil-button" class="tool-button" data-tool="pencil">Pencil</button>
+        <button id="eraser-button" class="tool-button" data-tool="eraser">Eraser</button>
+        <input type="color" id="color-picker" value="#000000">
+        <input type="range" id="line-width-slider" min="1" max="20" value="3">
+        <button id="clear-button" class="tool-button">Clear</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // JavaScript code will go here
+    </script>
+</body>
+</html>
